@@ -1,7 +1,7 @@
 var defaultTheme = {
   BASE: {
     'text-align': 'left',
-    'color': '#3f3f3f',
+    'color': 'rgb(89, 89, 89)!important',
     'line-height': '1.5'
   },
   BASE_BLOCK: {
@@ -22,14 +22,18 @@ var defaultTheme = {
       'margin': '40px 10px 20px 10px'
     },
     p: {
-      'margin': '10px 10px',
-      'line-height': '1.6'
+      'margin': '15px 15px',
+      'line-height': '1.8',
+      'margin-top': '1.75em!important',
+      'letter-spacing': '2px'
     },
     blockquote: {
+      'line-height': '1.6;',
       'color': 'rgb(91, 91, 91)',
       'padding': '1px 0 1px 10px',
-      'background': 'rgba(158, 158, 158, 0.1)',
-      'border-left': '3px solid rgb(158,158,158)',
+      'background': '#ffffff',
+      'border-left': '4px solid #42b983',
+      'box-shadow': '4px -2px 6px 2px #0000001f'
     },
     code: {
       'font-size': '80%',
@@ -64,7 +68,7 @@ var defaultTheme = {
     footnotes: {
       'margin': '10px 10px',
       'font-size': '14px'
-    }  
+    }
   },
   inline: {
     // inline element

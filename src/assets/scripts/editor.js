@@ -54,12 +54,12 @@ var app = new Vue({
       fonts: this.currentFont,
       size: this.currentSize
     })
-    axios({
-      method: 'get',
-      url: './assets/default-content.md',
-    }).then(function (resp) {
-      self.editor.setValue(resp.data)
-    })
+    // axios({
+    //   method: 'get',
+    //   url: './assets/default-content.md',
+    // }).then(function (resp) {
+    //   self.editor.setValue(resp.data)
+    // })
   },
   methods: {
     renderWeChat: function (source) {

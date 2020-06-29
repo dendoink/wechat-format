@@ -1,132 +1,107 @@
-使用时，你得把默认的 Markdown 内容换成你自己的内容。
+## 为什么你要学会使用 Chrome
 
-关于本工具的介绍请看[这篇公众号文章](https://mp.weixin.qq.com/s/pn0LzyfgUj6rGUfVHUksjg)。
+谷歌浏览器（通常简称为 `Chrome` ）是由谷歌开发的网络浏览器。 它于 2008 年首次针对 `Microsoft Windows` 发布，后来移植到 `Linux` ， `macOS` ， `iOS` 和 `Android` 。 浏览器也是 `Chrome OS` 的主要组件，它可以作为 `Web` 应用的平台。[Chrome-维基百科](https://en.wikipedia.org/wiki/Google_Chrome)
 
+浏览器的市场三足鼎立， `Chorme` ， `Safari` 和 `FireFox` ，从 2008 年 `Chrome` 横空出世以来，如今已经一家独大占据了半壁江山：
 
-## 一级标题
+![](https://wingman-1300536089.cos.ap-shanghai.myqcloud.com/chrome/BrowserUsageShare.png)
 
-这是一级标题
+By <a href="//en.wikipedia.org/wiki/User: Efa" title="User: Efa">Efa</a> - OpenOffice Calc, <a href="https://creativecommons.org/licenses/by-sa/4.0/" title="Creative Commons Attribution-ShareAlike 4.0">CC BY-SA 4.0</a>, <a href="https://en.wikipedia.org/w/index.php?curid=60616332">Link</a>
 
+对于大部分人来说， `Chrome` 可能只是个浏览器，但是对于开发人员来说，它更是一个强大无比的工具，为了方便开发人员调试代码，主流的浏览器都内置了 `DevTools` ，无论你是前端还是后端，掌握 `Chrome` 的调试技巧意味着效率的直接提高。而这个系列要介绍的，就是 `Chrome-DevTools` 的使用技巧。
 
-### 二级标题
+<!-- more -->
 
-上面是二级标题
+## DevTools 简介
 
-## 文字样式
+> 本段内容引用于 [Chrome DevTools ](https://developers.google.com/web/tools/chrome-devtools/#_1) 。熟悉的同学可以跳过，也可以选择跳转到原链接访问，这里是为了给没有接触过 `chrome-devtools` 的同学科普一些基础概念。
 
-### 基本样式
+### 打开 Chrome 开发者工具
 
-你好，我是一个来自地球的人。
+- 在 `Chrome` 菜单中选择 `更多工具` → `开发者工具` 
+- 在页面元素上右键点击，选择 `检查` 
+- `Windows`: `Ctrl` + `Shift` + `I` 
+- `Mac`: `Cmd` + `Opt` + `I`
 
-我是一个[智人](https://zh.wikipedia.org/wiki/智人 "学名：Homo sapiens，意为“有智慧的人”")，
-我喜欢穿新衣服，都是**黑衣服**。
+### 了解面板
 
-我最大的*爱好*是拆汽车，我拆了很多汽车，宝马、奔驰、劳斯莱斯和特斯拉，但是都没装回去。
+我将从以下 8 个面板来讲述面板内容：
 
-上面表现了链接和加重两种样式，公众号以外的链接会被转换为脚注。
+1. 元素面板
+2. 控制台面板
+3. 源代码面板
+4. 网络面板
+5. 性能面板
+6. 内存面板
+7. 应用面板
+8. 安全面板
 
+#### 1. 元素面板
 
-### 注音符号
+使用元素面板可以自由操作 `DOM` 和 `CSS` 来迭代布局和设计页面。
 
-[注音符号 W3C 定义](http://www.w3.org/TR/ruby/)。支持日语注音假名，小夜時雨【さ・よ・しぐれ】 和 汉语拼音 上海【Shàng・hǎi】
+* 检查和调整页面
+* 编辑样式
+* 编辑 `DOM` 
 
-用法有以下几种：
+![](https://wingman-1300536089.cos.ap-shanghai.myqcloud.com/chrome/elements.png)
 
-```
-世界【せかい】
-世界{せかい}
-```
+#### 2. 控制台面板
 
-世界{せかい}
+在开发期间，可以使用控制台面板记录诊断信息，或者使用它作为 `shell` 在页面上与 `JavaScript` 交互。
 
-```
-小夜時雨【さ・よ・しぐれ】
-```
+* 使用控制台面板
+* 命令行交互
 
-小夜時雨【さ・よ・しぐれ】
+![](https://wingman-1300536089.cos.ap-shanghai.myqcloud.com/chrome/console.png)
 
-```
-食べる【たべる】
-食べる{たべる}
-```
+#### 3. 源代码面板
 
-食べる{たべる}\n\n english【英文】 will not translated{fan yi}'
+在源代码面板中设置断点来调试 `JavaScript` ，或者通过 `Workspaces` （工作区）连接本地文件来使用开发者工具的实时编辑器
 
+* 断点调试
+* 调试混淆的代码
+* 使用开发者工具的 `Workspaces` （工作区）进行持久化保存
 
-## 段落、列表、引用
+![](https://wingman-1300536089.cos.ap-shanghai.myqcloud.com/chrome/sources.png)
 
-[Markdown](https://sspai.com/post/25137 "认识与入门 Markdown") 是一种写文章用的语法。
+#### 4. 网络面板
 
-我们日常写文章用的工具，比如说 Word，提供了大量排版格式样式相关的选项。
+使用网络面板了解请求和下载的资源文件并优化网页加载性能。
 
-在写作之外，大量的时间都在处理这些排版、格式、样式、字体、图片位置等等。这不但是耗时耗力的事情，而且还会打乱里写作时的思绪，影响你的工作。
+* 网络面板基础
+* 了解资源时间轴
+* 网络带宽限制
 
-列表项：
+![](https://wingman-1300536089.cos.ap-shanghai.myqcloud.com/chrome/network.png)
 
-- 一个列表项
-- 另一个列表项
-- 第三个列表项
+#### 5. 性能面板
 
-托 [Neko](https://github.com/nekocode) 的福，有序的列表项支持了。
+使用性能面板可以通过记录和查看网站生命周期内发生的各种事件来提高页面的运行时性能。
 
-1. 一个列表项
-2. 另一个列表项
-3. 第三个列表项
+![](https://wingman-1300536089.cos.ap-shanghai.myqcloud.com/chrome/performance.png)
 
-使用 Markdown 最大的意义在于可以让你关注写作本身，不需要花费精力在别的事情上。无论是严肃写作还是随手记，Markdown 都是最佳形式。
+#### 6. 内存面板
 
-> 引用：使用 Markdown 最大的意义在于可以让你关注写作本身 —— Lyric
+如果需要比时间轴面板提供的更多信息，可以使用内存面板，例如跟踪内存泄漏。
 
-好。
+* `JavaScript` CPU 分析器
+* 内存堆区分析器
 
-## 代码块、表格、图片
+![](https://wingman-1300536089.cos.ap-shanghai.myqcloud.com/chrome/memory.png)
 
-接下来是一张图片。你可以用自己图床，也可以上传到微信媒体库再把图片 URL 粘贴回来，或者编辑好以后，在公众号里插入图片。
+#### 7. 应用面板
 
-![](https://res.wx.qq.com/mpres/zh_CN/htmledition/pages/login/loginpage/images/bg_banner4273fb.png)
+使用应用面板检查加载的所有资源，包括 `IndexedDB` 与 `Web SQL` 数据库，本地和会话存储， `cookie` ，应用程序缓存，图像，字体和样式表。
 
-代码块，使用微信官方的高亮配色，在代码块标示语言即可。粘贴到公众号后，需要用鼠标点一下代码块，完成高亮。
+* 管理数据
 
+![](https://wingman-1300536089.cos.ap-shanghai.myqcloud.com/chrome/application.png)
 
-    ```cpp
-    你的代码
-    ```
+#### 8. 安全面板
 
+使用安全面板调试混合内容问题，证书问题等等。
 
+* 安全
 
-```cpp
-#include <stdio.h>
-
-const int MAX = 10;
-int cache[MAX] = {0};
-
-int fib(int x) {
-  if (x == 1) return 1;
-  if (x == 0) return 0;
-  if (cache[x] == 0) {
-    int ret = fib(x - 1) + fib(x - 2);
-    cache[x] = ret;
-  }
-  return cache[x];
-}
-
-int main() {
-    int i;
-    printf("fibonacci series:\n");
-    for (i = 0; i < MAX; ++i) {
-        printf("%d ", fib(i));
-    }
-    return 0;
-}
-```
-
-然后是一个内联代码： a paragraphg with inline code `{code: 0}`。
-
-接下来是表格示例：
-
-| Header 1 | Header 2 |
-| --- | --- |
-| Key 1 | Value 1 |
-| Key 2 | Value 2 |
-| Key 3 | Value 3 |
-
+![](https://wingman-1300536089.cos.ap-shanghai.myqcloud.com/chrome/security.png)
